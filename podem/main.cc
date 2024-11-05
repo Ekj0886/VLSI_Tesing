@@ -64,7 +64,9 @@ int SetupOption(int argc, char ** argv)
             "Implement Check Point Theorem", 0);
     option.enroll("bridging", GetLongOpt::NoValue, 
             "Create Bridging fault list", 0);
-
+    // ass5 
+    option.enroll("cfsim", GetLongOpt::NoValue,
+            "run check-point stuck at fault simulation", 0);
 
     int optind = option.parse(argc, argv);
     if ( optind < 1 ) { exit(0); }
@@ -184,6 +186,14 @@ int main(int argc, char ** argv)
     }
     else if(option.retrieve("bridging")) {
         Circuit.GenerateBridgeFaultList(option.retrieve("output"));
+    }
+    else if(option.retrieve("cfsim")) {
+        Circuit.GenerateAllFaultList();
+        Circuit.GenerateCheckPointFaultList();
+        Circuit.LoadCPFlist();
+        Circuit.SortFaninByLevel();
+        Circuit.MarkOutputGate();
+        Circuit.Atpg();
     }
     else {
         Circuit.GenerateAllFaultList();

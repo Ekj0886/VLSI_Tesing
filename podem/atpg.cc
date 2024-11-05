@@ -82,6 +82,12 @@ void CIRCUIT::GenerateCheckPointFaultList() {
     return;
 }
 
+void CIRCUIT::LoadCPFlist() {
+    Flist = CP_Flist;
+    UFlist = Flist;
+    return;
+}
+
 void CIRCUIT::CheckPointOutput() {
     float Percentage = (float) 100 * (Flist.size() - CP_Flist.size()) / Flist.size();
     cout << "Flist size: " << Flist.size() << endl;

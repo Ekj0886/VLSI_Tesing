@@ -1,6 +1,6 @@
 # make
 ./atpg -output input/c17.input ../circuits/iscas85/c17.bench
-# ./atpg -check_point ../circuits/iscas85/c17.bench
+./atpg -cfsim ../circuits/iscas85/c17.bench
 # ./atpg -fsim -input input/c17.input ../circuits/iscas85/c17.bench
 
 # ./atpg -output input/c2670.input ../circuits/iscas85/c2670.bench
