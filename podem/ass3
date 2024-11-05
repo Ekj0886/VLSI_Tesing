@@ -1,0 +1,9 @@
+./atpg -simulator c880.cc -input input/c880_100.input ../circuits/iscas85/c880.bench
+g++ c880.cc -o c880_simulator
+/usr/bin/time -f "Average memory usage: %K \nMaximum memory usage: %M\n" ./c880_simulator
+/usr/bin/time -f "Average memory usage: %K \nMaximum memory usage: %M\n" ./atpg -plogicsim -input input/c880_100.input ../circuits/iscas85/c880.bench
+
+./atpg -simulator c7552.cc -input input/c7552_100.input ../circuits/iscas85/c7552.bench
+g++ c7552.cc -o c7552_simulator
+/usr/bin/time -f "Average memory usage: %K \nMaximum memory usage: %M\n" ./c7552_simulator
+/usr/bin/time -f "Average memory usage: %K \nMaximum memory usage: %M\n" ./atpg -plogicsim -input input/c7552_100.input ../circuits/iscas85/c7552.bench

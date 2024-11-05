@@ -1,0 +1,9 @@
+Assignment1 313510171
+
+To run the package:
+
+1. $cd podem/
+2. $make    
+3. $./atpg -path -start [PI] -end [PO] [circuit_name]
+
+e.g. $./atpg -path -start 307GAT_18 -end PO_2548GAT_840 ../circuits/iscas85/c6288.bench

@@ -1,0 +1,9 @@
+# /usr/bin/time -f "Average memory usage: %K \nMaximum memory usage: %M\n" ./atpg -pattern -num 100 -output input/c17_100.input ../circuits/iscas85/c17.bench
+# /usr/bin/time -f "Average memory usage: %K \nMaximum memory usage: %M\n" ./atpg -pattern -num 1000 -output input/c17_1000.input ../circuits/iscas85/c17.bench
+# /usr/bin/time -f "Average memory usage: %K \nMaximum memory usage: %M\n" ./atpg -pattern -num 10000 -output input/c17_10000.input ../circuits/iscas85/c17.bench
+# /usr/bin/time -f "Average memory usage: %K \nMaximum memory usage: %M\n" ./atpg -pattern -num 10000000 -output input/c17_large.input ../circuits/iscas85/c17.bench
+
+# /usr/bin/time -f "Average memory usage: %K \nMaximum memory usage: %M\n" ./atpg -pattern -num 100 -output input/c7552_100.input ../circuits/iscas85/c7552.bench
+# /usr/bin/time -f "Average memory usage: %K \nMaximum memory usage: %M\n" ./atpg -pattern -num 1000 -output input/c7552_1000.input ../circuits/iscas85/c7552.bench
+# /usr/bin/time -f "Average memory usage: %K \nMaximum memory usage: %M\n" ./atpg -pattern -num 10000 -output input/c7552_10000.input ../circuits/iscas85/c7552.bench
+/usr/bin/time -f "Average memory usage: %K \nMaximum memory usage: %M\n" ./atpg -pattern -num 100 -output input/c880_100.input ../circuits/iscas85/c880.bench
